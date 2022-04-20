@@ -1,0 +1,65 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --main-text-cl-light: #000000;
+  --main-text-cl-dark: #ffffff;
+  --secondary-text-cl-light: #545454;
+  --secondary-text-cl-dark: #ababab;
+  --accent-cl: #ff6b08;
+  --main-cl-light: #ffffff;
+  --main-cl-dark: #000000;
+  --logo-cl: #818181;
+  --secondary-bg-cl-light: #f7f7f7;
+  --secondary-bg-cl-dark: #080808;
+  --backdrop-cl-light: rgba(0, 0, 0, 0.2);
+  --backdrop-cl-dark: rgba(255, 255, 255, 0.1);
+  --box-shadow-cl-dark: 4px 4px 8px 0px rgba(145, 137, 137, 0.625);
+  --box-shadow-cl-light: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+[data-scheme="dark"] {
+  --main-text-cl: var(--main-text-cl-dark);
+  --secondary-text-cl: var(--secondary-text-cl-dark);
+  --main-cl: var(--main-cl-dark);
+  --secondary-bg-cl: var(--secondary-bg-cl-dark);
+  --backdrop-cl: var(--backdrop-cl-dark);
+  --box-shadow-cl: var(--box-shadow-cl-dark);
+}
+[data-scheme="light"] {
+  --main-text-cl: var(--main-text-cl-light);
+  --secondary-text-cl: var(--secondary-text-cl-light);
+  --main-cl: var(--main-cl-light);
+  --secondary-bg-cl: var(--secondary-bg-cl-light);
+  --backdrop-cl: var(--backdrop-cl-light);
+  --box-shadow-cl: var(--box-shadow-cl-light);
+}
+html {
+  font-size: calc(12px + 0.5vw);
+  line-height: 1.33;
+  font-weight: 500;
+  scroll-behavior: smooth;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: Roboto, system-ui, -apple-system, "Segoe UI", Helvetica, Arial,
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  color: var(--main-text-cl);
+  background-color: var(--main-cl);
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
