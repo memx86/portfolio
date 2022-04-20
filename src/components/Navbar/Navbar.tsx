@@ -15,6 +15,14 @@ function NavBar({ theme, changeTheme }: Props) {
     <header className={s.header}>
       <Container>
         <div className={s.wrapper}>
+          <IconButton onClick={changeTheme}>
+            {theme === THEME.LIGHT && (
+              <BsFillMoonFill style={{ width: "25px", height: "25px" }} />
+            )}
+            {theme === THEME.DARK && (
+              <BsFillSunFill style={{ width: "25px", height: "25px" }} />
+            )}
+          </IconButton>
           <nav className={s.nav}>
             <NavLink
               className={({ isActive }) => (isActive ? s.active : s.link)}
@@ -24,19 +32,23 @@ function NavBar({ theme, changeTheme }: Props) {
             </NavLink>
             <NavLink
               className={({ isActive }) => (isActive ? s.active : s.link)}
+              to="/about"
+            >
+              About
+            </NavLink>
+            <NavLink
+              className={({ isActive }) => (isActive ? s.active : s.link)}
+              to="/portfolio"
+            >
+              Portfolio
+            </NavLink>
+            <NavLink
+              className={({ isActive }) => (isActive ? s.active : s.link)}
               to="/contact"
             >
-              Contact me
+              Contact
             </NavLink>
           </nav>
-          <IconButton onClick={changeTheme}>
-            {theme === THEME.LIGHT && (
-              <BsFillMoonFill style={{ width: "25px", height: "25px" }} />
-            )}
-            {theme === THEME.DARK && (
-              <BsFillSunFill style={{ width: "25px", height: "25px" }} />
-            )}
-          </IconButton>
         </div>
       </Container>
     </header>

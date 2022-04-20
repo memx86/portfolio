@@ -1,7 +1,9 @@
 import { Route, Routes } from "react-router-dom";
 import Navbar from "components/Navbar";
 import Home from "views/Home";
+import About from "views/About";
 import Contact from "views/Contact";
+import Portfolio from "views/Portfolio";
 import NotFound from "views/NotFound";
 import useLocalStorage from "services/useLocalStorage";
 import THEME from "constants/THEME";
@@ -24,6 +26,8 @@ function App() {
       <Navbar theme={theme} changeTheme={changeTheme} />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
