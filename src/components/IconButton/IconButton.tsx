@@ -4,11 +4,17 @@ type Props = {
   children: React.ReactNode;
   onClick: React.MouseEventHandler;
   type?: "button" | "submit" | "reset";
+  label: string;
 };
 
-function IconButton({ children, onClick, type = "button" }: Props) {
+function IconButton({ children, onClick, type = "button", label }: Props) {
   return (
-    <button type={type} onClick={onClick} className={s.button}>
+    <button
+      type={type}
+      onClick={onClick}
+      aria-label={label}
+      className={s.button}
+    >
       {children}
     </button>
   );

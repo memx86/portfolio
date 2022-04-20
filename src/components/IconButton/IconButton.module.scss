@@ -1,10 +1,10 @@
 .button {
-  width: 40px;
-  height: 40px;
+  width: 25px;
+  height: 25px;
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  color: var(--accent-cl);
+  color: var(--main-text-cl);
   border: 1px solid transparent;
   border-radius: 50%;
   background-color: transparent;
@@ -14,7 +14,6 @@
   &:hover,
   &:focus {
     outline: none;
-    color: var(--main-cl-light);
-    background-color: var(--accent-cl);
+    color: var(--accent-cl);
   }
 }

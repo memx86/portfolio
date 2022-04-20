@@ -1,5 +1,12 @@
 import { NavLink } from "react-router-dom";
-import { BsFillMoonFill, BsFillSunFill } from "react-icons/bs";
+import {
+  FiMoon,
+  FiSun,
+  FiHome,
+  FiInfo,
+  FiFolder,
+  FiSend,
+} from "react-icons/fi";
 import Container from "components/Container";
 import IconButton from "components/IconButton";
 import THEME from "constants/THEME";
@@ -11,42 +18,39 @@ type Props = {
 };
 
 function NavBar({ theme, changeTheme }: Props) {
+  const style = { width: "25px", height: "25px" };
   return (
     <header className={s.header}>
       <Container>
         <div className={s.wrapper}>
-          <IconButton onClick={changeTheme}>
-            {theme === THEME.LIGHT && (
-              <BsFillMoonFill style={{ width: "25px", height: "25px" }} />
-            )}
-            {theme === THEME.DARK && (
-              <BsFillSunFill style={{ width: "25px", height: "25px" }} />
-            )}
+          <IconButton onClick={changeTheme} label="theme">
+            {theme === THEME.LIGHT && <FiMoon style={style} />}
+            {theme === THEME.DARK && <FiSun style={style} />}
           </IconButton>
           <nav className={s.nav}>
             <NavLink
               className={({ isActive }) => (isActive ? s.active : s.link)}
               to="/"
             >
-              Home
+              <FiHome style={style} />
             </NavLink>
             <NavLink
               className={({ isActive }) => (isActive ? s.active : s.link)}
               to="/about"
             >
-              About
+              <FiInfo style={style} />
             </NavLink>
             <NavLink
               className={({ isActive }) => (isActive ? s.active : s.link)}
               to="/portfolio"
             >
-              Portfolio
+              <FiFolder style={style} />
             </NavLink>
             <NavLink
               className={({ isActive }) => (isActive ? s.active : s.link)}
               to="/contact"
             >
-              Contact
+              <FiSend style={style} />
             </NavLink>
           </nav>
         </div>

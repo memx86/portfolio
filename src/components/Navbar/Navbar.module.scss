@@ -1,8 +1,12 @@
 .header {
   padding-top: 1rem;
   padding-bottom: 1rem;
-  border-bottom: 1px solid var(--secondary-text-cl);
-  box-shadow: var(--box-shadow-cl);
+}
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
 }
 .nav {
   display: flex;
@@ -22,12 +26,7 @@
   composes: link;
   opacity: 1;
 }
-.wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-}
+
 .right {
   margin-left: auto;
   display: flex;
