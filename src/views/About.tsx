@@ -1,11 +1,6 @@
-import Container from "components/Container";
-import Section from "components/Section";
+import { Fragment } from "react";
 
 function About() {
-  return (
-    <Section>
-      <Container>About</Container>
-    </Section>
-  );
+  return <Fragment>About</Fragment>;
 }
 export default About;

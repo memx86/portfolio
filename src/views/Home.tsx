@@ -1,11 +1,6 @@
-import Container from "components/Container";
-import Section from "components/Section";
+import { Fragment } from "react";
 
 function Home() {
-  return (
-    <Section>
-      <Container>Home</Container>
-    </Section>
-  );
+  return <Fragment>Home</Fragment>;
 }
 export default Home;

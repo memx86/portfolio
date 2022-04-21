@@ -8,6 +8,7 @@ import NotFound from "views/NotFound";
 import useLocalStorage from "services/useLocalStorage";
 import THEME from "constants/THEME";
 import s from "./App.module.scss";
+import Main from "components/Main";
 
 function App() {
   const defaultDark = window.matchMedia(
@@ -24,13 +25,15 @@ function App() {
   return (
     <div data-scheme={theme} className={s.app}>
       <Navbar theme={theme} changeTheme={changeTheme} />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/portfolio" element={<Portfolio />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="*" element={<NotFound />} />
-      </Routes>
+      <Main>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/portfolio" element={<Portfolio />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </Main>
     </div>
   );
 }

@@ -18,39 +18,39 @@ type Props = {
 };
 
 function NavBar({ theme, changeTheme }: Props) {
-  const style = { width: "25px", height: "25px" };
+  const iconStyle = { width: "25px", height: "25px" };
   return (
     <header className={s.header}>
       <Container>
         <div className={s.wrapper}>
           <IconButton onClick={changeTheme} label="theme">
-            {theme === THEME.LIGHT && <FiMoon style={style} />}
-            {theme === THEME.DARK && <FiSun style={style} />}
+            {theme === THEME.LIGHT && <FiMoon style={iconStyle} />}
+            {theme === THEME.DARK && <FiSun style={iconStyle} />}
           </IconButton>
           <nav className={s.nav}>
             <NavLink
               className={({ isActive }) => (isActive ? s.active : s.link)}
               to="/"
             >
-              <FiHome style={style} />
+              <FiHome style={iconStyle} />
             </NavLink>
             <NavLink
               className={({ isActive }) => (isActive ? s.active : s.link)}
               to="/about"
             >
-              <FiInfo style={style} />
+              <FiInfo style={iconStyle} />
             </NavLink>
             <NavLink
               className={({ isActive }) => (isActive ? s.active : s.link)}
               to="/portfolio"
             >
-              <FiFolder style={style} />
+              <FiFolder style={iconStyle} />
             </NavLink>
             <NavLink
               className={({ isActive }) => (isActive ? s.active : s.link)}
               to="/contact"
             >
-              <FiSend style={style} />
+              <FiSend style={iconStyle} />
             </NavLink>
           </nav>
         </div>

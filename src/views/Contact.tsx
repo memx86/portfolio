@@ -1,11 +1,6 @@
-import Container from "components/Container";
-import Section from "components/Section";
+import { Fragment } from "react";
 
 function Contact() {
-  return (
-    <Section>
-      <Container>Contact me</Container>
-    </Section>
-  );
+  return <Fragment>Contact me</Fragment>;
 }
 export default Contact;

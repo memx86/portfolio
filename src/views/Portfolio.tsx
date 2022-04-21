@@ -1,11 +1,6 @@
-import Container from "components/Container";
-import Section from "components/Section";
+import { Fragment } from "react";
 
 function Portfolio() {
-  return (
-    <Section>
-      <Container>Portfolio</Container>
-    </Section>
-  );
+  return <Fragment>Portfolio</Fragment>;
 }
 export default Portfolio;

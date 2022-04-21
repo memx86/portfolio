@@ -4,7 +4,7 @@ import s from "./Loader.module.scss";
 export default function Loader() {
   return (
     <div className={s.loader}>
-      <ThreeDots color="#0066cc" height={80} width={80} />
+      <ThreeDots color="#ff6b08" height={80} width={80} />
     </div>
   );
 }
