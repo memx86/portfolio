@@ -24,6 +24,7 @@
 }
 .active {
   composes: link;
+  color: var(--accent-cl);
   opacity: 1;
 }
 
