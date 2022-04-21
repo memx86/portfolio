@@ -1,13 +1,10 @@
 import { useEffect, useState } from "react";
 
 const useLocalStorage = (key: string, initialValue: any) => {
-  const [storage, setStorage] = useState(initialValue);
+  const stored = window.localStorage.getItem(key);
+  const storedValue = stored && JSON.parse(stored);
 
-  useEffect(() => {
-    const initial = window.localStorage.getItem(key);
-    const value = initial && JSON.parse(initial);
-    if (value) setStorage(value);
-  }, [key]);
+  const [storage, setStorage] = useState(storedValue ?? initialValue);
 
   useEffect(() => {
     try {

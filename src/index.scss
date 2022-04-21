@@ -41,6 +41,27 @@ html {
   line-height: 1.33;
   font-weight: 500;
   scroll-behavior: smooth;
+  scrollbar-color: var(--secondary-text-cl-light) var(--secondary-bg-cl);
+
+  &::-webkit-scrollbar {
+    width: 16px;
+    height: 16px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: var(--logo-cl);
+    border-radius: 16px;
+    box-shadow: inset 2px 2px 2px hsla(0, 0%, 100%, 0.25),
+      inset -2px -2px 2px rgba(0, 0, 0, 0.25);
+  }
+  &::-webkit-scrollbar-track {
+    background: linear-gradient(
+      90deg,
+      var(--logo-cl),
+      var(--logo-cl) 1px,
+      var(--secondary-text-cl-dark) 0,
+      var(--secondary-text-cl-dark)
+    );
+  }
 }
 body {
   display: flex;
