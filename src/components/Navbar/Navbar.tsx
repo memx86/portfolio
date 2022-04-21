@@ -13,7 +13,7 @@ import THEME from "constants/THEME";
 import s from "./Navbar.module.scss";
 
 type Props = {
-  theme: "light" | "dark";
+  theme: string;
   changeTheme: React.MouseEventHandler;
 };
 type isActive = {

@@ -1,10 +1,15 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 
-const useLocalStorage = (key: string, initialValue: any) => {
+const useLocalStorage = <T>(
+  key: string,
+  initialValue: T
+): [T, React.Dispatch<T>] => {
   const stored = window.localStorage.getItem(key);
-  const storedValue = stored && JSON.parse(stored);
+  const storedValue: T | null = stored && JSON.parse(stored);
 
-  const [storage, setStorage] = useState(storedValue ?? initialValue);
+  const [storage, setStorage]: [T, React.Dispatch<T>] = useState(
+    storedValue ?? initialValue
+  );
 
   useEffect(() => {
     try {
