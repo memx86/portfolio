@@ -16,9 +16,15 @@ type Props = {
   theme: "light" | "dark";
   changeTheme: React.MouseEventHandler;
 };
+type isActive = {
+  isActive: boolean;
+};
+
+const iconStyle = { width: "25px", height: "25px" };
+const chooseClassName = ({ isActive }: isActive) =>
+  isActive ? s.active : s.link;
 
 function NavBar({ theme, changeTheme }: Props) {
-  const iconStyle = { width: "25px", height: "25px" };
   return (
     <header className={s.header}>
       <Container>
@@ -28,28 +34,16 @@ function NavBar({ theme, changeTheme }: Props) {
             {theme === THEME.DARK && <FiSun style={iconStyle} />}
           </IconButton>
           <nav className={s.nav}>
-            <NavLink
-              className={({ isActive }) => (isActive ? s.active : s.link)}
-              to="/"
-            >
+            <NavLink className={chooseClassName} to="/">
               <FiHome style={iconStyle} />
             </NavLink>
-            <NavLink
-              className={({ isActive }) => (isActive ? s.active : s.link)}
-              to="/about"
-            >
+            <NavLink className={chooseClassName} to="/about">
               <FiInfo style={iconStyle} />
             </NavLink>
-            <NavLink
-              className={({ isActive }) => (isActive ? s.active : s.link)}
-              to="/portfolio"
-            >
+            <NavLink className={chooseClassName} to="/portfolio">
               <FiFolder style={iconStyle} />
             </NavLink>
-            <NavLink
-              className={({ isActive }) => (isActive ? s.active : s.link)}
-              to="/contact"
-            >
+            <NavLink className={chooseClassName} to="/contact">
               <FiSend style={iconStyle} />
             </NavLink>
           </nav>
