@@ -1,6 +1,6 @@
 import { Fragment } from "react";
 
-function Contact() {
+function ContactPage() {
   return <Fragment>Contact me</Fragment>;
 }
-export default Contact;
+export default ContactPage;

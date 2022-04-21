@@ -1,14 +1,14 @@
 import { Route, Routes } from "react-router-dom";
+import Main from "components/Main";
 import Navbar from "components/Navbar";
-import Home from "views/Home";
-import About from "views/About";
-import Contact from "views/Contact";
-import Portfolio from "views/Portfolio";
-import NotFound from "views/NotFound";
+import HomePage from "pages/HomePage";
+import AboutPage from "pages/AboutPage";
+import PortfolioPage from "pages/PortfolioPage";
+import ContactPage from "pages/ContactPage";
+import NotFoundPage from "pages/NotFoundPage";
 import useLocalStorage from "services/useLocalStorage";
 import THEME from "constants/THEME";
 import s from "./App.module.scss";
-import Main from "components/Main";
 
 function App() {
   const defaultDark = window.matchMedia(
@@ -27,11 +27,11 @@ function App() {
       <Navbar theme={theme} changeTheme={changeTheme} />
       <Main>
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/portfolio" element={<Portfolio />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="*" element={<NotFound />} />
+          <Route path="/" element={<HomePage />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/portfolio" element={<PortfolioPage />} />
+          <Route path="/contact" element={<ContactPage />} />
+          <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </Main>
     </div>

@@ -1,5 +1,6 @@
 import { Fragment } from "react";
 
-export default function NotFound() {
+function NotFoundPage() {
   return <Fragment>Page not found</Fragment>;
 }
+export default NotFoundPage;
