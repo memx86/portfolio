@@ -9,8 +9,10 @@
   }
 }
 .img {
+  margin-right: auto;
   margin-left: auto;
   @include mq(tablet) {
+    margin-right: unset;
     width: 400px;
   }
 }
@@ -23,6 +25,10 @@
 }
 .title {
   font-size: 1.5em;
+  text-align: center;
+  @include mq(tablet) {
+    text-align: unset;
+  }
 }
 .block {
   display: block;
