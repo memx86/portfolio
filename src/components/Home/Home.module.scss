@@ -2,24 +2,36 @@
 
 .container {
   @include mq(tablet) {
-    display: flex;
-    gap: 5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    justify-content: center;
   }
 }
 .img {
-  margin: 0 auto;
+  margin-left: auto;
+  @include mq(tablet) {
+    width: 400px;
+  }
 }
 .content {
   padding: 1rem;
+  font-size: 1.5rem;
+  @include mq(desktop) {
+    max-width: 550px;
+  }
 }
 .title {
-  font-size: 1.5rem;
+  font-size: 1.5em;
+}
+.block {
+  display: block;
 }
 .name {
-  margin-left: 0.25rem;
+  composes: block;
   color: var(--accent-cl);
 }
 .summary {
-  margin-top: 0.5rem;
+  margin-top: 1rem;
   text-align: justify;
 }

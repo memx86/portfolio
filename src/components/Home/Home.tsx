@@ -14,11 +14,11 @@ function Home() {
       />
       <div className={s.content}>
         <p className={s.title}>
-          Hi, my name is
+          <span className={s.block}> Hi, my name is</span>
           <span className={s.name}>
-            {name} {lastname}
+            {name} {lastname}.
           </span>
-          . I'm a web developer.
+          <span className={s.block}>I'm a web developer.</span>
         </p>
         <p className={s.summary}>{summary}</p>
       </div>
