@@ -1,5 +1,13 @@
+@import "../../styles/_mixin.scss";
+
 .container {
-  display: flex;
+  @include mq(tablet) {
+    display: flex;
+    gap: 5rem;
+  }
+}
+.img {
+  margin: 0 auto;
 }
 .content {
   padding: 1rem;
@@ -10,4 +18,8 @@
 .name {
   margin-left: 0.25rem;
   color: var(--accent-cl);
+}
+.summary {
+  margin-top: 0.5rem;
+  text-align: justify;
 }

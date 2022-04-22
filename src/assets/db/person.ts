@@ -6,6 +6,8 @@ const person = {
   phone: "+38-066-323-87-79",
   email: "memx86@gmail.com",
   location: "Zaporizhzhia, Ukraine",
+  summary:
+    "I love to code, find elegant solutions to complex problems, interact with new tools and to learn new skills and technologies. To challenge myself. To find different ways to make something work and to do it best way. To take ideas in my head and make them come to life.",
   links: [
     {
       title: "LinkedIn",
