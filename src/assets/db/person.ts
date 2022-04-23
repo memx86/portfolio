@@ -1,4 +1,8 @@
 import photo from "./photo";
+import icecream from "./icecream";
+import movies from "./movies";
+import contacts from "./contacts";
+import contactsBackend from "./contactsBackend";
 
 const person = {
   name: "Yevhen",
@@ -40,21 +44,25 @@ const person = {
       title: "Icecream",
       url: "https://github.com/memx86/team-project-html-css",
       tech: ["HTML5", "CSS3"],
+      image: icecream,
     },
     {
       title: "Filmoteka",
-      url: "https://github.com/memx86/team-project-js",
+      url: "https://github.com/memx86/team-project-js-tmdb",
       tech: ["JavaScript"],
+      image: movies,
     },
     {
       title: "Contacts Front-End",
       url: "https://github.com/memx86/goit-react-hw-08-phonebook",
       tech: ["React.js"],
+      image: contacts,
     },
     {
       title: "Contacts Back-End",
       url: "https://github.com/memx86/nodejs-homework-template/tree/hw06-email",
       tech: ["Node.js "],
+      image: contactsBackend,
     },
   ],
   languages: [
