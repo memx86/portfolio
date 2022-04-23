@@ -42,24 +42,29 @@ const person = {
   projects: [
     {
       title: "Icecream",
-      url: "https://github.com/memx86/team-project-html-css",
+      source: "https://github.com/memx86/team-project-html-css",
+      url: "https://memx86.github.io/team-project-html-css/",
       tech: ["HTML5", "CSS3"],
       image: icecream,
     },
     {
       title: "Filmoteka",
-      url: "https://github.com/memx86/team-project-js-tmdb",
+      source: "https://github.com/memx86/team-project-js-tmdb",
+      url: "https://memx86.github.io/team-project-js-tmdb/",
       tech: ["JavaScript"],
       image: movies,
     },
     {
       title: "Contacts Front-End",
-      url: "https://github.com/memx86/goit-react-hw-08-phonebook",
+      source: "https://github.com/memx86/goit-react-hw-08-phonebook",
+      url: "https://memx86-goit-react-hw-08-phonebook.netlify.app/",
       tech: ["React.js"],
       image: contacts,
     },
     {
       title: "Contacts Back-End",
+      source:
+        "https://github.com/memx86/nodejs-homework-template/tree/hw06-email",
       url: "https://github.com/memx86/nodejs-homework-template/tree/hw06-email",
       tech: ["Node.js "],
       image: contactsBackend,

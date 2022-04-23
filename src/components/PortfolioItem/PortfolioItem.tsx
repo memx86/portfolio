@@ -29,9 +29,12 @@ function PortfolioItem({ item }: Props) {
         rel="noreferrer noopener"
         target="_blank"
         aria-label={title}
+        className={s.link}
       >
         <Picture image={image} alt={title} />
-        <p className={s.tech}>{tech.join(" ")}</p>
+        <div className={s.wrapper}>
+          <p className={s.tech}>{tech.join(", ")}</p>
+        </div>
       </a>
     </Fragment>
   );
