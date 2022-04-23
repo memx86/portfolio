@@ -1,15 +1,4 @@
-import photoSJpg from "assets/images/photo-s.jpg";
-import photoS2xJpg from "assets/images/photo-s@2x.jpg";
-import photoS3xJpg from "assets/images/photo-s@3x.jpg";
-import photoLJpg from "assets/images/photo-l.jpg";
-import photoL2xJpg from "assets/images/photo-l@2x.jpg";
-import photoL3xJpg from "assets/images/photo-l@3x.jpg";
-import photoSWebp from "assets/images/photo-s.webp";
-import photoS2xWebp from "assets/images/photo-s@2x.webp";
-import photoS3xWebp from "assets/images/photo-s@3x.webp";
-import photoLWebp from "assets/images/photo-l.webp";
-import photoL2xWebp from "assets/images/photo-l@2x.webp";
-import photoL3xWebp from "assets/images/photo-l@3x.webp";
+import photo from "./photo";
 
 const person = {
   name: "Yevhen",
@@ -29,20 +18,7 @@ const person = {
       url: "https://github.com/memx86",
     },
   ],
-  photo: {
-    jpgS: photoSJpg,
-    jpgS2x: photoS2xJpg,
-    jpgS3x: photoS3xJpg,
-    jpgL: photoLJpg,
-    jpgL2x: photoL2xJpg,
-    jpgL3x: photoL3xJpg,
-    webpS: photoSWebp,
-    webpS2x: photoS2xWebp,
-    webpS3x: photoS3xWebp,
-    webpL: photoLWebp,
-    webpL2x: photoL2xWebp,
-    webpL3x: photoL3xWebp,
-  },
+  photo,
   skills: [
     "JavaScript",
     "ES6+",
@@ -50,6 +26,7 @@ const person = {
     "React.js",
     "Redux.js",
     "Node.js",
+    "Express.js",
     "MongoDB",
     "Mongoose ODM",
     "HTML5",
@@ -96,8 +73,8 @@ const person = {
   },
   experience: [
     {
-      title: "Technical Support Specialist",
       company: "Metabank",
+      title: "Technical Support Specialist",
       location: "Zaporizhzhia, Ukraine",
       type: "Full-time",
       start: "January 2008",
@@ -106,17 +83,17 @@ const person = {
         "Responding to customer inquiries and assisting in troubleshooting and resolving challenges.\nMaintaining system functionality. Installing and configuring computer systems and applications within the company.",
     },
     {
-      title: "Officer",
       company: "Security Service of Ukraine",
+      title: "Officer",
       location: "Zaporizhzhia, Ukraine",
       type: "Full-time",
       start: "August 2010",
       end: "August 2020",
-      description: "Technical specialist. Classified.",
+      description: "Technical specialist. Specifics is classified.",
     },
     {
-      title: "Security consultant",
       company: "Freelance",
+      title: "Security consultant",
       location: "Zaporizhzhia, Ukraine",
       type: "Full-time",
       start: "August 2020",
