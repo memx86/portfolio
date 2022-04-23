@@ -89,7 +89,8 @@ const person = {
       type: "Full-time",
       start: "August 2010",
       end: "August 2020",
-      description: "Technical specialist. Specifics is classified.",
+      description:
+        "Operational Technology Department. Specifics is classified.",
     },
     {
       company: "Freelance",
