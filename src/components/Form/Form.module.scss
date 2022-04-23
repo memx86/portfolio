@@ -1,0 +1,44 @@
+.form {
+  display: grid;
+  gap: 2.5rem;
+}
+.label {
+  position: relative;
+}
+.input {
+  display: block;
+  width: 100%;
+  padding: 1rem;
+  background-color: transparent;
+  color: var(--main-text-cl);
+  border: 1px solid var(--main-text-cl);
+  &:focus {
+    outline: none;
+  }
+}
+.text {
+  position: absolute;
+  top: 1.5rem;
+  left: 1rem;
+  transform: translateY(-50%);
+  pointer-events: none;
+  transition: transform 250ms linear;
+  .input:focus + &,
+  .input:not(:placeholder-shown) + & {
+    transform: translateY(-250%);
+  }
+}
+.textarea {
+  composes: input;
+  resize: none;
+}
+.button {
+  composes: input;
+  cursor: pointer;
+  transition: color 250ms linear, border-color 250ms linear;
+  &:hover,
+  &:focus {
+    color: var(--accent-cl);
+    border-color: var(--accent-cl);
+  }
+}

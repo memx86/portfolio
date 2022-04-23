@@ -10,6 +10,7 @@ import {
 import Container from "components/Container";
 import IconButton from "components/IconButton";
 import THEME from "constants/THEME";
+import iconStyleSmall from "styles/iconStyleSmall";
 import s from "./Navbar.module.scss";
 
 type Props = {
@@ -20,7 +21,6 @@ type isActive = {
   isActive: boolean;
 };
 
-const iconStyle = { width: "25px", height: "25px" };
 const chooseClassName = ({ isActive }: isActive) =>
   isActive ? s.active : s.link;
 
@@ -30,21 +30,21 @@ function NavBar({ theme, changeTheme }: Props) {
       <Container>
         <div className={s.wrapper}>
           <IconButton onClick={changeTheme} label="theme">
-            {theme === THEME.LIGHT && <FiMoon style={iconStyle} />}
-            {theme === THEME.DARK && <FiSun style={iconStyle} />}
+            {theme === THEME.LIGHT && <FiMoon style={iconStyleSmall} />}
+            {theme === THEME.DARK && <FiSun style={iconStyleSmall} />}
           </IconButton>
           <nav className={s.nav}>
             <NavLink className={chooseClassName} to="/">
-              <FiHome style={iconStyle} />
+              <FiHome style={iconStyleSmall} />
             </NavLink>
             <NavLink className={chooseClassName} to="/about">
-              <FiInfo style={iconStyle} />
+              <FiInfo style={iconStyleSmall} />
             </NavLink>
             <NavLink className={chooseClassName} to="/portfolio">
-              <FiFolder style={iconStyle} />
+              <FiFolder style={iconStyleSmall} />
             </NavLink>
             <NavLink className={chooseClassName} to="/contact">
-              <FiSend style={iconStyle} />
+              <FiSend style={iconStyleSmall} />
             </NavLink>
           </nav>
         </div>

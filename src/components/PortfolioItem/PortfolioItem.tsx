@@ -1,5 +1,6 @@
 import { FaRegPlayCircle, FaGithub } from "react-icons/fa";
 import Picture from "components/Picture";
+import iconStyle from "styles/iconStyle";
 import s from "./PortfolioItem.module.scss";
 
 type Item = {
@@ -20,7 +21,6 @@ type Item = {
 type Props = {
   item: Item;
 };
-const iconStyle = { width: 50, height: 50 };
 
 function PortfolioItem({ item }: Props) {
   const { title, tech, url, source, image } = item;

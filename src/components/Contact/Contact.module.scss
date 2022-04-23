@@ -1,24 +1,40 @@
-.form {
+@import "../../styles/mixin";
+.container {
+  display: grid;
+  gap: 2rem;
+  @include mq(tablet) {
+    grid-template-columns: 1fr 2fr;
+  }
+}
+.contacts {
   display: grid;
   gap: 1rem;
 }
-.input {
-  padding: 1rem;
-  background-color: transparent;
-  color: var(--main-text-cl);
-  border: 1px solid var(--main-text-cl);
+.flex {
+  display: flex;
+  gap: 0.25rem;
+  align-items: center;
 }
-.textarea {
-  composes: input;
-  resize: none;
+.logo {
+  color: var(--logo-cl);
 }
-.button {
-  composes: input;
-  cursor: pointer;
-  transition: color 250ms linear, border-color 250ms linear;
+.hover {
+  transition: color 250ms linear;
   &:hover,
   &:focus {
     color: var(--accent-cl);
-    border-color: var(--accent-cl);
   }
+}
+.link {
+  composes: hover;
+  margin-left: 0.25rem;
+  text-decoration: underline;
+}
+.social {
+  composes: flex;
+  gap: 1rem;
+}
+.icon {
+  composes: hover;
+  color: var(--logo-cl);
 }
