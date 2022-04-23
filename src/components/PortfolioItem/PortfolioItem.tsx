@@ -1,9 +1,10 @@
+import { FaRegPlayCircle, FaGithub } from "react-icons/fa";
 import Picture from "components/Picture";
-import { Fragment } from "react";
 import s from "./PortfolioItem.module.scss";
 
 type Item = {
   title: string;
+  source: string;
   url: string;
   tech: string[];
   image: {
@@ -19,24 +20,38 @@ type Item = {
 type Props = {
   item: Item;
 };
+const iconStyle = { width: 50, height: 50 };
 
 function PortfolioItem({ item }: Props) {
-  const { title, tech, url, image } = item;
+  const { title, tech, url, source, image } = item;
   return (
-    <Fragment>
-      <a
-        href={url}
-        rel="noreferrer noopener"
-        target="_blank"
-        aria-label={title}
-        className={s.link}
-      >
-        <Picture image={image} alt={title} />
-        <div className={s.wrapper}>
-          <p className={s.tech}>{tech.join(", ")}</p>
+    <li className={s.item}>
+      <Picture image={image} alt={title} className={s.img} />
+      <div className={s.wrapper}>
+        <p className={s.tech}>Title: {title}</p>
+        <p className={s.tech}>Tech: {tech.join(", ")}</p>
+        <div className={s.icons}>
+          <a
+            href={url}
+            rel="noreferrer noopener"
+            target="_blank"
+            aria-label={title}
+            className={s.link}
+          >
+            <FaRegPlayCircle style={iconStyle} />
+          </a>
+          <a
+            href={source}
+            rel="noreferrer noopener"
+            target="_blank"
+            aria-label="Github"
+            className={s.link}
+          >
+            <FaGithub style={iconStyle} />
+          </a>
         </div>
-      </a>
-    </Fragment>
+      </div>
+    </li>
   );
 }
 export default PortfolioItem;

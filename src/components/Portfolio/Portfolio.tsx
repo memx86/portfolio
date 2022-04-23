@@ -10,9 +10,7 @@ function Portfolio() {
       <h2 className="title">My portfolio</h2>
       <ul className={s.list}>
         {projects.map((project) => (
-          <li key={project.url}>
-            <PortfolioItem item={project} />
-          </li>
+          <PortfolioItem key={project.url} item={project} />
         ))}
       </ul>
     </Fragment>
