@@ -1,19 +1,18 @@
+@import "../../styles/mixin";
+
+.skills {
+  margin-bottom: 2rem;
+  display: grid;
+  gap: 2rem;
+  justify-content: center;
+  @include mq(tablet) {
+    grid-template-columns: 2fr 1fr;
+  }
+}
 .wrapper {
   &:not(:last-child) {
     margin-bottom: 2rem;
   }
   display: grid;
   gap: 2rem;
-}
-.list {
-  display: grid;
-  gap: 1rem;
-  text-align: center;
-}
-.skills {
-  composes: list;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-}
-.item {
-  text-transform: uppercase;
 }

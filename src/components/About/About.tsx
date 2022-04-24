@@ -10,10 +10,8 @@ function About() {
   return (
     <Fragment>
       <h2 className="title">About me</h2>
-      <div className={s.wrapper}>
+      <div className={s.skills}>
         <Skills skills={skills} />
-      </div>
-      <div className={s.wrapper}>
         <Languages languages={languages} />
       </div>
       <div className={s.wrapper}>

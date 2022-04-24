@@ -1,4 +1,3 @@
-import { Fragment } from "react";
 import s from "./Skills.module.scss";
 
 type Props = {
@@ -6,7 +5,7 @@ type Props = {
 };
 function Skills({ skills }: Props) {
   return (
-    <Fragment>
+    <div>
       <p className={s.subtitle}>My Skills</p>
       <ul className={s.skills}>
         {skills.map((skill) => (
@@ -15,7 +14,7 @@ function Skills({ skills }: Props) {
           </li>
         ))}
       </ul>
-    </Fragment>
+    </div>
   );
 }
 

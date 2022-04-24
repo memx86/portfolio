@@ -1,4 +1,3 @@
-import { Fragment } from "react";
 import s from "./Languages.module.scss";
 
 type Language = {
@@ -11,7 +10,7 @@ type Props = {
 
 function Languages({ languages }: Props) {
   return (
-    <Fragment>
+    <div>
       <p className={s.subtitle}>Languages</p>
       <ul className={s.list}>
         {languages.map(({ language, proficiency }) => (
@@ -20,7 +19,7 @@ function Languages({ languages }: Props) {
           </li>
         ))}
       </ul>
-    </Fragment>
+    </div>
   );
 }
 export default Languages;
