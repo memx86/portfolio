@@ -1,4 +1,5 @@
 import { useForm, SubmitHandler } from "react-hook-form";
+import { toast } from "react-toastify";
 import emailjs from "@emailjs/browser";
 import s from "./Form.module.scss";
 
@@ -27,9 +28,11 @@ function Form() {
   const onSubmit: SubmitHandler<FormValues> = (data) => {
     emailjs
       .send(EMAILJS.SERVICE, EMAILJS.TEMPLATE, data, EMAILJS.KEY)
-      .then(console.log)
-      .catch(console.log);
-    reset();
+      .then(() => {
+        toast.success("Email sent");
+        reset();
+      })
+      .catch(() => toast.error("Can't send an email. Please try again"));
   };
   return (
     <form onSubmit={handleSubmit(onSubmit)} className={s.form}>

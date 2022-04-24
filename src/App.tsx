@@ -1,4 +1,6 @@
 import { Route, Routes } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import Main from "components/Main";
 import Navbar from "components/Navbar";
 import HomePage from "pages/HomePage";
@@ -34,6 +36,7 @@ function App() {
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </Main>
+      <ToastContainer hideProgressBar />
     </div>
   );
 }
