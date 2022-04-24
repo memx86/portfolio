@@ -43,7 +43,7 @@ function Form() {
           className={s.input}
         />
         <span className={s.text}>Name</span>
-        {errors.name && <span>Enter your name please</span>}
+        {errors.name && <span className={s.error}>Enter your name please</span>}
       </label>
       <label className={s.label}>
         <input
@@ -53,7 +53,7 @@ function Form() {
           className={s.input}
         />
         <span className={s.text}>Email</span>
-        {errors.email && <span>Enter an email please</span>}
+        {errors.email && <span className={s.error}>Enter an email please</span>}
       </label>
       <label className={s.label}>
         <input
@@ -62,7 +62,9 @@ function Form() {
           className={s.input}
         />
         <span className={s.text}>Subject</span>
-        {errors.subject && <span>Specify a subject please</span>}
+        {errors.subject && (
+          <span className={s.error}>Specify a subject please</span>
+        )}
       </label>
       <label className={s.label}>
         <textarea
@@ -72,7 +74,9 @@ function Form() {
           className={s.textarea}
         />
         <span className={s.text}>Message</span>
-        {errors.message && <span>Leave a message please</span>}
+        {errors.message && (
+          <span className={s.error}>Leave a message please</span>
+        )}
       </label>
       <button type="submit" className={s.button}>
         Send me an email

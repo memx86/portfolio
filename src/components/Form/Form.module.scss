@@ -15,6 +15,11 @@
   &:focus {
     outline: none;
   }
+  &:-webkit-autofill {
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: var(--main-text-cl);
+  }
 }
 .text {
   position: absolute;
@@ -27,6 +32,14 @@
   .input:not(:placeholder-shown) + & {
     transform: translateY(-250%);
   }
+}
+.error {
+  position: absolute;
+  z-index: 2;
+  left: 1rem;
+  top: -2rem;
+  color: var(--accent-cl);
+  background-color: var(--main-cl);
 }
 .textarea {
   composes: input;
