@@ -1,0 +1,16 @@
+.link {
+  display: inline-flex;
+  margin-top: 1rem;
+  padding: 1rem;
+  align-items: baseline;
+  border: 1px solid var(--accent-cl);
+  border-radius: 50px;
+  transition: background-color 250ms linear;
+  &:hover,
+  &:focus {
+    background-color: var(--accent-cl);
+  }
+}
+.icon {
+  margin-left: 0.5rem;
+}

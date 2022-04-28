@@ -1,6 +1,7 @@
-import person from "assets/db/person";
 import Picture from "components/Picture";
+import person from "assets/db/person";
 import s from "./Home.module.scss";
+import CV from "components/CV";
 
 function Home() {
   const { name, lastname, photo, summary } = person;
@@ -15,6 +16,7 @@ function Home() {
           <span className={s.block}>I'm a web developer.</span>
         </p>
         <p className={s.summary}>{summary}</p>
+        <CV />
       </div>
     </div>
   );
