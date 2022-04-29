@@ -65,7 +65,7 @@ const person = {
       title: "Contacts Back-End",
       source:
         "https://github.com/memx86/nodejs-homework-template/tree/hw06-email",
-      url: "https://memx86.github.io/nodejs-homework-template/",
+      url: "https://app.swaggerhub.com/apis-docs/memx86/Contacts/1.0.0",
       tech: ["Node.js "],
       image: contactsBackend,
     },
