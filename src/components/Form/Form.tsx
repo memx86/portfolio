@@ -1,13 +1,16 @@
 import { useForm, SubmitHandler } from "react-hook-form";
 import { toast } from "react-toastify";
 import emailjs from "@emailjs/browser";
+import useLocalStorage from "services/useLocalStorage";
+import FORM from "constants/FORM";
 import s from "./Form.module.scss";
+import { useEffect } from "react";
 
 type FormValues = {
-  name: string;
-  email: string;
-  subject: string;
-  message: string;
+  name?: string | undefined;
+  email?: string | undefined;
+  subject?: string | undefined;
+  message?: string | undefined;
 };
 
 const required = { required: true };
@@ -18,12 +21,23 @@ const EMAILJS = {
 };
 
 function Form() {
+  const [storage, setStorage] = useLocalStorage(FORM.KEY, {});
   const {
     register,
     handleSubmit,
+    watch,
     reset,
     formState: { errors },
-  } = useForm<FormValues>();
+  } = useForm<FormValues>({
+    defaultValues: storage,
+  });
+
+  useEffect(() => {
+    const subscription = watch((data) => {
+      setStorage(data);
+    });
+    return () => subscription.unsubscribe();
+  }, [setStorage, watch]);
 
   const onSubmit: SubmitHandler<FormValues> = (data) => {
     emailjs
