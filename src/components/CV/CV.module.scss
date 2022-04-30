@@ -5,13 +5,19 @@
   align-items: baseline;
   border: 1px solid var(--accent-cl);
   border-radius: 20px;
-  transition: background-color 250ms linear, border-color 250ms linear;
+  transition: color 250ms linear, background-color 250ms linear;
   &:hover,
   &:focus {
-    border-color: var(--main-text-cl);
+    color: var(--main-text-cl-dark);
     background-color: var(--accent-cl);
   }
 }
 .icon {
   margin-left: 0.5rem;
+  color: var(--accent-cl);
+  transition: color 250ms linear;
+  .link:hover &,
+  .link:focus & {
+    color: var(--main-text-cl-dark);
+  }
 }
