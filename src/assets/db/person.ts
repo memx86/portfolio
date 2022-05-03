@@ -37,7 +37,7 @@ const person = {
     "CSS3",
     "SASS",
     "Git",
-    "Visual Studio Code",
+    "Googling",
   ],
   projects: [
     {
