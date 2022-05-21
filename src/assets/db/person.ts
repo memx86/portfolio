@@ -1,6 +1,7 @@
 import photo from "./photo";
 import icecream from "./icecream";
 import movies from "./movies";
+import wallet from "./wallet";
 import contacts from "./contacts";
 import contactsBackend from "./contactsBackend";
 
@@ -55,6 +56,13 @@ const person = {
       image: movies,
     },
     {
+      title: "Wallet",
+      source: "https://github.com/memx86/team-project-react",
+      url: "https://memx86-team-project-wallet.netlify.app/",
+      tech: ["React.js"],
+      image: wallet,
+    },
+    {
       title: "Contacts Front-End",
       source: "https://github.com/memx86/goit-react-hw-08-phonebook",
       url: "https://memx86-goit-react-hw-08-phonebook.netlify.app/",
@@ -73,7 +81,7 @@ const person = {
   languages: [
     { language: "Ukrainian", proficiency: "native" },
     { language: "Russian", proficiency: "native" },
-    { language: "English", proficiency: "advanced" },
+    { language: "English", proficiency: "upper-intermediate" },
   ],
   education: {
     country: "Ukraine",
