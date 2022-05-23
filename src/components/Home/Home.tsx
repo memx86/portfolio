@@ -1,10 +1,12 @@
-import Picture from "components/Picture";
 import person from "assets/db/person";
-import s from "./Home.module.scss";
+
+import Picture from "components/Picture";
 import CV from "components/CV";
 
+import s from "./Home.module.scss";
+
 function Home() {
-  const { name, lastname, photo, summary } = person;
+  const { name, lastname, profession, photo, summary } = person;
   const fullName = `${name} ${lastname}`;
   return (
     <div className={s.container}>
@@ -13,7 +15,7 @@ function Home() {
         <p className={s.title}>
           <span className={s.block}> Hi, my name is</span>
           <span className={s.name}>{fullName}.</span>
-          <span className={s.block}>I'm a web developer.</span>
+          <span className={s.block}>I'm a {profession}.</span>
         </p>
         <p className={s.summary}>{summary}</p>
         <CV />

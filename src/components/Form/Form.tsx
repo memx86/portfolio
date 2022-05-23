@@ -1,10 +1,13 @@
+import { useEffect } from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { toast } from "react-toastify";
 import emailjs from "@emailjs/browser";
+
 import useLocalStorage from "services/useLocalStorage";
+
 import FORM from "constants/FORM";
+
 import s from "./Form.module.scss";
-import { useEffect } from "react";
 
 type FormValues = {
   name?: string | undefined;

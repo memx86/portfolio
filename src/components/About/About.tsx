@@ -1,8 +1,11 @@
 import { Fragment } from "react";
+
 import person from "assets/db/person";
+
 import Skills from "components/Skills";
 import Languages from "components/Languages";
 import ListObj from "components/ListObj";
+
 import s from "./About.module.scss";
 
 function About() {

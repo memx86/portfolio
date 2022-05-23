@@ -1,7 +1,10 @@
 import { Fragment } from "react";
+
 import person from "assets/db/person";
-import s from "./Portfolio.module.scss";
+
 import PortfolioItem from "components/PortfolioItem";
+
+import s from "./Portfolio.module.scss";
 
 function Portfolio() {
   const { projects } = person;

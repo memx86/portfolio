@@ -1,3 +1,4 @@
+import { Fragment } from "react";
 import {
   FaMapMarkerAlt,
   FaEnvelope,
@@ -5,12 +6,14 @@ import {
   FaLinkedin,
   FaGithub,
 } from "react-icons/fa";
+
 import Form from "components/Form";
+
 import person from "assets/db/person";
 import iconStyle from "styles/iconStyle";
 import iconStyleSmall from "styles/iconStyleSmall";
+
 import s from "./Contact.module.scss";
-import { Fragment } from "react";
 
 function Contact() {
   const { phone, email, location, links } = person;

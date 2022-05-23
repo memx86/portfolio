@@ -8,6 +8,7 @@ import contactsBackend from "./contactsBackend";
 const person = {
   name: "Yevhen",
   lastname: "Malyshko",
+  profession: "Full Stack Developer",
   phone: "+38-066-323-87-79",
   email: "memx86@gmail.com",
   location: "Zaporizhzhia, Ukraine",
@@ -79,9 +80,9 @@ const person = {
     },
   ],
   languages: [
+    { language: "English", proficiency: "upper-intermediate" },
     { language: "Ukrainian", proficiency: "native" },
     { language: "Russian", proficiency: "native" },
-    { language: "English", proficiency: "upper-intermediate" },
   ],
   education: {
     country: "Ukraine",
@@ -106,7 +107,7 @@ const person = {
     {
       company: "Security Service of Ukraine",
       title: "Officer",
-      location: "Zaporizhzhia, Ukraine",
+      location: "Ukraine",
       type: "Full-time",
       start: "August 2010",
       end: "August 2020",

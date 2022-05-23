@@ -1,4 +1,5 @@
 import { Children } from "types/Children";
+
 import s from "./Section.module.scss";
 
 function Section({ children }: Children) {

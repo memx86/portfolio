@@ -7,10 +7,13 @@ import {
   FiFolder,
   FiSend,
 } from "react-icons/fi";
-import Container from "components/Container";
-import IconButton from "components/IconButton";
+
 import THEME from "constants/THEME";
 import iconStyleSmall from "styles/iconStyleSmall";
+
+import Container from "components/Container";
+import IconButton from "components/IconButton";
+
 import s from "./Navbar.module.scss";
 
 type Props = {

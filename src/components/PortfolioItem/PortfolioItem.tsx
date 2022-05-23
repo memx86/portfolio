@@ -1,6 +1,9 @@
 import { FaRegPlayCircle, FaGithub } from "react-icons/fa";
-import Picture from "components/Picture";
+
 import iconStyle from "styles/iconStyle";
+
+import Picture from "components/Picture";
+
 import s from "./PortfolioItem.module.scss";
 
 type Item = {

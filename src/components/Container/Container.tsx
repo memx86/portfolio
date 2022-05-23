@@ -1,4 +1,5 @@
 import { Children } from "types/Children";
+
 import s from "./Container.module.scss";
 
 function Container({ children }: Children) {

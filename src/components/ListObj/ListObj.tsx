@@ -1,9 +1,11 @@
 import s from "./ListObj.module.scss";
+
 type Props = {
   obj: {
     [key: string]: string;
   };
 };
+
 function ListObj({ obj }: Props) {
   const keys = Object.keys(obj);
 
